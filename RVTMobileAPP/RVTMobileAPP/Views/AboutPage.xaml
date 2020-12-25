@@ -3,11 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RVTMobileAPP.Views.AboutPage"
              xmlns:vm="clr-namespace:RVTMobileAPP.ViewModels"
-             Title="{Binding Title}">
-    
-    <ContentPage.BindingContext>
-        <vm:AboutViewModel />
-    </ContentPage.BindingContext>
+             Title="Despre noi">
     
     <ContentPage.Resources>
         <ResourceDictionary>

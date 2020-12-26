@@ -4,10 +4,11 @@
              x:Class="RVTMobileAPP.Views.ContactPage"
              Title="Contactează-ne">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="20" Spacing="30" HorizontalOptions="Fill"> 
+            <Entry x:Name="Name" MaxLength="20" WidthRequest="1" Placeholder="Numele tău"/>
+            <Entry x:Name="Email" Placeholder="Adresa de email"/>
+            <Editor x:Name="Message" Placeholder="Mesajul tău" HeightRequest="100"/>
+            <Button Clicked="Send_clicked" Text="Trimite" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

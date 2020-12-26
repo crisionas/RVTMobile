@@ -93,6 +93,12 @@
     <FlyoutItem Title="Votează" Icon="icon_vote.png">
         <ShellContent Route="AuthorizePage" ContentTemplate="{DataTemplate local:AuthorizePage}" />
     </FlyoutItem>
+    <FlyoutItem Title="Statistici" Icon="icon_stats.png">
+        <ShellContent Route="StatisticsPage" ContentTemplate="{DataTemplate local:StatisticsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Rezultate" Icon="icon_results.png">
+        <ShellContent Route="ResultsPage" ContentTemplate="{DataTemplate local:ResultsPage}" />
+    </FlyoutItem>
     <FlyoutItem Title="Contactează-ne" Icon="icon_contact.png">
         <ShellContent Route="ContactPage" ContentTemplate="{DataTemplate local:ContactPage}" />
     </FlyoutItem>

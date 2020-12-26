@@ -1,4 +1,4 @@
-﻿using RVTMobileAPP.Services;
+﻿
 using RVTMobileAPP.Views;
 using System;
 using Xamarin.Forms;
@@ -12,8 +12,7 @@ namespace RVTMobileAPP
         public App()
         {
             InitializeComponent();
-
-            DependencyService.Register<MockDataStore>();
+            
             MainPage = new AppShell();
         }
 

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RVTMobileAPP.Android", "RVT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RVTMobileAPP.iOS", "RVTMobileAPP\RVTMobileAPP.iOS\RVTMobileAPP.iOS.csproj", "{8AB5929D-5DC9-486B-B974-6F1798222074}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RVTMobileAPP", "RVTMobileAPP\RVTMobileAPP\RVTMobileAPP.csproj", "{648B9EB2-D694-4B33-A7B6-DE50CA30E3FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RVTMobileAPP", "RVTMobileAPP\RVTMobileAPP\RVTMobileAPP.csproj", "{648B9EB2-D694-4B33-A7B6-DE50CA30E3FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

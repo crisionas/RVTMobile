@@ -1,14 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters1="clr-namespace:RVTMobileAPP.Helpers.Converters;assembly=RVTMobileAPP"
+             xmlns:behaviours="clr-namespace:RVTMobileAPP.Helpers.Behaviours;assembly=RVTMobileAPP"
              x:Class="RVTMobileAPP.Views.LoginPage"
              Title="Logare">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters1:InverseBoolConverter x:Key="InverseBoolConverter"/>
+            <converters1:FirstValidationErrorConverter x:Key="FirstValidationErrorConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout  Spacing="20" Margin="45" VerticalOptions="Center" >
+        <ScrollView>
+        <StackLayout Padding="30"
+                         VerticalOptions="CenterAndExpand">
+
+            <Label Text="Logare"
+                      Style="{StaticResource TitleStyle}"/>
             <Image Source="ic_login.png" WidthRequest="150" HeightRequest="150"/>
-            <Entry x:Name="IDNPEntry" MaxLength="13" Placeholder="IDNP"   />
-            <Entry x:Name="PasswordEntry" Placeholder="Parola" IsPassword="True" />
-            <Button Text="LOGARE"/>
+                <!--IDNP-->
+            <Entry Text="{Binding IDNP.Value}" 
+                       Placeholder="IDNP">
+                <Entry.Behaviors>
+                    <behaviours:EntryLineValidationBehaviour IsValid="{Binding IDNP.IsValid}"/>
+                </Entry.Behaviors>
+            </Entry>
+
+            <Label Text="{Binding IDNP.Errors, Converter={StaticResource FirstValidationErrorConverter}}"
+                        IsVisible="{Binding IDNP.IsValid, Converter={StaticResource InverseBoolConverter}}"
+                         Style="{StaticResource ErrorTextStyle}"/>
+
+
+            <!--Password-->
+            <Entry Text="{Binding Password.Value}"
+                         Placeholder="Parola">
+                <Entry.Behaviors>
+                    <behaviours:EntryLineValidationBehaviour IsValid="{Binding Password.IsValid}"/>
+                </Entry.Behaviors>
+            </Entry>
+
+                <Label Text="{Binding Password.Errors, Converter={StaticResource FirstValidationErrorConverter}}"
+                        IsVisible="{Binding Password.IsValid, Converter={StaticResource InverseBoolConverter}}"
+                        Style="{StaticResource ErrorTextStyle}"/>
+
+
+            <Button Text="LOGARE"
+                        Command="{Binding LogInCommand}"/>
         </StackLayout>
+
+            </ScrollView>
     </ContentPage.Content>
 </ContentPage>

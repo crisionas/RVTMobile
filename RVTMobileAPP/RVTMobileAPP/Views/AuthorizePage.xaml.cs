@@ -17,9 +17,14 @@ namespace RVTMobileAPP.Views
             InitializeComponent();
         }
 
-        private async void Button_OnClicked(object sender, EventArgs e)
+        private async void Login_OnClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new LoginPage());
+        }
+
+        private async void Registration_OnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RegistrationPage());
         }
     }
 }

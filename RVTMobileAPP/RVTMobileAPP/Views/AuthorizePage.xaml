@@ -5,8 +5,8 @@
     <ContentPage.Content>
         <StackLayout Margin="30" Spacing="20" VerticalOptions="Center">
             <Image Source="RVTLogo.png"></Image>
-            <Button  Text="Logare" Clicked="Button_OnClicked"/>
-            <Button  Text="Înregistrare"  Command="{Binding LoginCommand}"/>
+            <Button  Text="Logare" Clicked="Login_OnClicked"/>
+            <Button  Text="Înregistrare"  Clicked="Registration_OnClicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

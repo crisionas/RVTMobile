@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace RVTMobileAPP.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AuthorizePage : ContentPage
+    public partial class LoginPage : ContentPage
     {
-        public AuthorizePage()
+        public LoginPage()
         {
             InitializeComponent();
-        }
-
-        private async void Button_OnClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new LoginPage());
         }
     }
 }

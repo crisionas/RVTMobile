@@ -24,7 +24,7 @@ namespace RVTMobileAPP.Views
 
         private async void Registration_OnClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new RegistrationPage());
+            await Navigation.PushAsync(new RegistPage());
         }
     }
 }

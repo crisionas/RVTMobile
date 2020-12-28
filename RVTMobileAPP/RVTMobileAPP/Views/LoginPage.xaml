@@ -4,7 +4,7 @@
              xmlns:converters1="clr-namespace:RVTMobileAPP.Helpers.Converters;assembly=RVTMobileAPP"
              xmlns:behaviours="clr-namespace:RVTMobileAPP.Helpers.Behaviours;assembly=RVTMobileAPP"
              x:Class="RVTMobileAPP.Views.LoginPage"
-             Title="Logare">
+             Title="RVT | Logare">
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters1:InverseBoolConverter x:Key="InverseBoolConverter"/>

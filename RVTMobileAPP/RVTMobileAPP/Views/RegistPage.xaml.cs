@@ -4,24 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RVTMobileAPP.ViewModels;
+using ValidationsXFSample.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace RVTMobileAPP.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class RegistPage : ContentPage
     {
-        public LoginPage()
+        public RegistPage()
         {
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
-        }
-
-
-        private void Button_OnClicked(object sender, EventArgs e)
-        {
-           
+            BindingContext = new RegisterViewModel();
         }
     }
 }

@@ -1,11 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Windows.Input;
+using AutoMapper;
+using RVTMobileAPP.Interfaces;
+using RVTMobileAPP.Models.Registration;
+using RVTMobileAPP.Services;
 using RVTMobileAPP.Validators;
 using RVTMobileAPP.Validators.Rules;
+using RVTMobileAPP.Views;
 using Xamarin.Forms;
 
 namespace RVTMobileAPP.ViewModels
@@ -50,11 +57,29 @@ namespace RVTMobileAPP.ViewModels
             TermsAndCondition.Validations.Add(new IsValueTrueRule<bool> { ValidationMessage = "Vă rugăm să acceptați termenii și condițiile" });
 
         }
+
+        private IUser user;
         public ICommand SignUpCommand => new Command(async () =>
         {
             if (AreFieldsValid())
             {
-                await App.Current.MainPage.DisplayAlert("Welcome", "", "Ok");
+                var model = new RegistrationMessage
+                {
+                    IDNP = IDNP.Value,
+                    Ip_address= Dns.GetHostAddresses(Dns.GetHostName()).FirstOrDefault().ToString(),
+                    Birth_date = Birth_date.Value,
+                    Name = Name.Value,
+                    Surname = Surname.Value,
+                    Gender = Gender.Value,
+                    Phone_Number =Number.Value,
+                    Email = Email.Value,
+                    RegisterDate = DateTime.Now
+                }; 
+
+                var service = DependencyService.Get<IUser>().Registration(model);
+                await App.Current.MainPage.DisplayAlert("Înregistrare", service.Result.Message, "Ok");
+                if(service.Result.Status)
+                await Application.Current.MainPage.Navigation.PushModalAsync(new LoginPage());
             }
         });
 

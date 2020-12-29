@@ -99,7 +99,7 @@
     <FlyoutItem Title="Rezultate" Icon="icon_results.png">
         <ShellContent Route="ResultsPage" ContentTemplate="{DataTemplate local:ResultsPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Contactează-ne" Icon="icon_contact.png">
+    <FlyoutItem Title="Contact" Icon="icon_contact.png">
         <ShellContent Route="ContactPage" ContentTemplate="{DataTemplate local:ContactPage}" />
     </FlyoutItem>
 

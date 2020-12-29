@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RVTMobileAPP.Views.ContactPage"
-             Title="Contactează-ne">
+             Title="RVT | Contact">
     <ContentPage.Content>
-        <StackLayout Padding="20" Spacing="30" HorizontalOptions="Fill"> 
+        <StackLayout Padding="20" Spacing="30" HorizontalOptions="Fill">
+            <Image Source="ic_contact.png" WidthRequest="100" HeightRequest="100"/> 
             <Entry x:Name="Name" MaxLength="20" WidthRequest="1" Placeholder="Numele tău"/>
             <Entry x:Name="Email" Placeholder="Adresa de email"/>
             <Editor x:Name="Message" Placeholder="Mesajul tău" HeightRequest="100"/>

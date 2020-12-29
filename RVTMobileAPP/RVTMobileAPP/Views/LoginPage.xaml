@@ -18,7 +18,7 @@
 
             <Label Text="Logare"
                       Style="{StaticResource TitleStyle}"/>
-            <Image Source="ic_login.png" WidthRequest="150" HeightRequest="150"/>
+            <Image Source="ic_login.png" WidthRequest="100" HeightRequest="100"/>
                 <!--IDNP-->
             <Entry Text="{Binding IDNP.Value}" 
                        Placeholder="IDNP">

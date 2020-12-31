@@ -7,7 +7,7 @@
             <StackLayout>
 
 
-                <Label Text="Votează" Padding="10" x:Name="TextVot"
+                <Label Text="Votează" Padding="10" x:Name="TextVot" FontAttributes="Bold"
                        Style="{StaticResource TitleStyle}"/>
                 <BoxView VerticalOptions="Center"
                          HorizontalOptions="Center"

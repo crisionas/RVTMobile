@@ -17,7 +17,7 @@
                          VerticalOptions="CenterAndExpand">
 
             <Label Text="Logare"
-                      Style="{StaticResource TitleStyle}"/>
+                      Style="{StaticResource TitleStyle}" FontAttributes="Bold"/>
             <Image Source="ic_login.png" WidthRequest="100" HeightRequest="100"/>
                 <!--IDNP-->
             <Entry Text="{Binding IDNP.Value}" 

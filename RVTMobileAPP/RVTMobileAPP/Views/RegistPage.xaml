@@ -16,7 +16,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Padding="30" VerticalOptions="CenterAndExpand" >
-                <Label Text="Înregistrare" Style="{StaticResource TitleStyle}"/>
+                <Label Text="Înregistrare" Style="{StaticResource TitleStyle}" FontAttributes="Bold"/>
                 <Image Source="ic_registration.png" WidthRequest="100" HeightRequest="100"/>
                
                 <!--Name-->

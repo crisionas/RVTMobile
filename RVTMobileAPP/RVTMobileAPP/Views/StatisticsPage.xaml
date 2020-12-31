@@ -1,12 +1,131 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="RVTMobileAPP.Views.StatisticsPage">
+             xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="RVTMobileAPP.Views.StatisticsPage"
+             Title="RVT | Procesul de vot">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <ScrollView>
+        <StackLayout Padding="40">
+            <Label Text="Republica Moldova"
+                   FontAttributes="Bold"
+                   Style="{StaticResource TitleStyle}"/>
+            <BoxView VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     HeightRequest="3"
+                     WidthRequest="300" Color="#006ed6" CornerRadius="90"/>
+
+            <!--Region-->
+            <Picker Title="Selectează raionul"
+                    HorizontalTextAlignment="Center"
+                        SelectedItem="{Binding Region.Value}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Municipiul Chișinău</x:String>
+                        <x:String>Municipiul Bălți</x:String>
+                        <x:String>Municipiul Bender (Tighina)</x:String>
+                        <x:String>Anenii Noi</x:String>
+                        <x:String>Basarabeasca</x:String>
+                        <x:String>Briceni</x:String>
+                        <x:String>Cahul</x:String>
+                        <x:String>Camenca</x:String>
+                        <x:String>Călărași</x:String>
+                        <x:String>Cantemir</x:String>
+                        <x:String>Căușeni</x:String>
+                        <x:String>Cimișlia</x:String>
+                        <x:String>Criuleni</x:String>
+                        <x:String>Dondușeni</x:String>
+                        <x:String>Drochia</x:String>
+                        <x:String>Dubăsari</x:String>
+                        <x:String>Edineț</x:String>
+                        <x:String>Fălești</x:String>
+                        <x:String>Florești</x:String>
+                        <x:String>Glodeni</x:String>
+                        <x:String>Hîncești</x:String>
+                        <x:String>Ialoveni</x:String>
+                        <x:String>Leova</x:String>
+                        <x:String>Nisporeni</x:String>
+                        <x:String>Ocnița</x:String>
+                        <x:String>Orhei</x:String>
+                        <x:String>Rezina</x:String>
+                        <x:String>Rîșcani</x:String>
+                        <x:String>Sîngerei</x:String>
+                        <x:String>Soroca</x:String>
+                        <x:String>Strășeni</x:String>
+                        <x:String>Șoldănești</x:String>
+                        <x:String>Ștefan Vodă</x:String>
+                        <x:String>Taraclia</x:String>
+                        <x:String>Telenești</x:String>
+                        <x:String>Ungheni</x:String>
+                        <x:String>Unitatea Teritorială Autonomă Găgăuzia</x:String>
+                        <x:String>Unitățile Administrativ-Teritoriale din Stînga Nistrului.</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+
+            <Grid 
+                Padding="10,0,10,10"
+                HeightRequest="70"
+                VerticalOptions="Start">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="8"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="1"
+                       Text="Populația"
+                       FontSize="18"
+                       Font="Bold"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center" />
+                <Label Grid.Row="1"
+                       Grid.Column="1"
+                           
+                       Text="Votanți"
+                       FontSize="18"
+                       Font="Bold"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Label Grid.Row="1"
+                       Grid.Column="2"
+                           
+                       Text="Participarea"
+                       FontSize="18"
+                       Font="Bold"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+
+                <Label Grid.Row="2"
+                       Text="test"
+                       FontSize="16"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center" />
+
+
+                <Label Grid.Row="2"
+                       Grid.Column="1"
+                           
+                       Text="test"
+                       FontSize="16"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Label Grid.Row="2"
+                       Grid.Column="2"
+                           
+                       Text="test"
+                       FontSize="16"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+
+            </Grid>
+                <Label Text="Sexul" TextColor="#006ed6" HorizontalTextAlignment="Center" FontSize="20"
+                   FontAttributes="Bold"/>
+                <forms:ChartView x:Name="Chart1" HeightRequest="200"/>
+                <Label Text="Total alegători"  TextColor="#006ed6" HorizontalTextAlignment="Center" FontSize="20"
+                   FontAttributes="Bold"/>
+                <forms:ChartView x:Name="Chart2" HeightRequest="200"/>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

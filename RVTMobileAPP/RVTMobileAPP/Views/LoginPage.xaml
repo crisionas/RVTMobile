@@ -21,7 +21,7 @@
             <Image Source="ic_login.png" WidthRequest="100" HeightRequest="100"/>
                 <!--IDNP-->
             <Entry Text="{Binding IDNP.Value}" 
-                       Placeholder="IDNP">
+                       Placeholder="IDNP" HorizontalOptions="FillAndExpand">
                 <Entry.Behaviors>
                     <behaviours:EntryLineValidationBehaviour IsValid="{Binding IDNP.IsValid}"/>
                 </Entry.Behaviors>
@@ -33,8 +33,9 @@
 
 
             <!--Password-->
+
             <Entry Text="{Binding Password.Value}"
-                         Placeholder="Parola">
+                         Placeholder="Parola" IsPassword="True" HorizontalOptions="FillAndExpand">
                 <Entry.Behaviors>
                     <behaviours:EntryLineValidationBehaviour IsValid="{Binding Password.IsValid}"/>
                 </Entry.Behaviors>
@@ -45,7 +46,7 @@
                         Style="{StaticResource ErrorTextStyle}"/>
 
 
-            <Button Text="LOGARE"
+            <Button Text="LOGARE" x:Name="Button"
                         Command="{Binding LogInCommand}"/>
         </StackLayout>
 

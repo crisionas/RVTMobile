@@ -57,8 +57,7 @@ namespace RVTMobileAPP.ViewModels
             TermsAndCondition.Validations.Add(new IsValueTrueRule<bool> { ValidationMessage = "Vă rugăm să acceptați termenii și condițiile" });
 
         }
-
-        private IUser user;
+        
         public ICommand SignUpCommand => new Command(async () =>
         {
             if (AreFieldsValid())
@@ -79,7 +78,7 @@ namespace RVTMobileAPP.ViewModels
                 var service = DependencyService.Get<IUser>().Registration(model);
                 await App.Current.MainPage.DisplayAlert("Înregistrare", service.Result.Message, "Ok");
                 if(service.Result.Status)
-                await Application.Current.MainPage.Navigation.PushModalAsync(new LoginPage());
+                await Application.Current.MainPage.Navigation.PushAsync(new LoginPage());
             }
         });
 

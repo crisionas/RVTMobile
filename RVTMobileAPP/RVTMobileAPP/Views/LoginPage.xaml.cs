@@ -18,10 +18,5 @@ namespace RVTMobileAPP.Views
             this.BindingContext = new LoginViewModel();
         }
 
-
-        private void Button_OnClicked(object sender, EventArgs e)
-        {
-           
-        }
     }
 }

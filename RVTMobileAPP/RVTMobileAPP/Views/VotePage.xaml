@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RVTMobileAPP.Views.VotePage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+
+                <Label Text="Votează" Padding="10" x:Name="TextVot"
+                       Style="{StaticResource TitleStyle}"/>
+                <BoxView VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         HeightRequest="3"
+                         WidthRequest="400" Color="#006ed6" CornerRadius="90"/>
+                <Grid 
+                      Padding="10,0,10,10"
+                      HeightRequest="70"
+                      VerticalOptions="Start">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="8"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="1"
+                           Text="1"
+                           FontSize="30"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center" />
+                    <BoxView Grid.Row="1"  
+                             Grid.Column="1"
+                             Color="Green" />
+
+                    <Label Grid.Row="1"
+                           Grid.Column="2"
+                           
+                           Text="Partidul Verde"
+                           FontSize="20"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center" />
+                    <RadioButton  Grid.Row="1"
+                                  Grid.Column="3"
+                                  Text="1"
+                                  x:Name="GreenButton"
+                                  GroupName="PartiesToVote"
+                                  HorizontalOptions="End"
+                                  VerticalOptions="Center" />
+                </Grid>
+                <BoxView VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         HeightRequest="3"
+                         WidthRequest="400" Color="#006ed6" CornerRadius="90"/>
+                <Grid 
+                      Padding="10,0,10,10"
+                      HeightRequest="70"
+                      VerticalOptions="Start">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="1"
+                           Text="2"
+                           FontSize="30"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center" />
+                    <BoxView Grid.Row="1"  
+                             Grid.Column="1"
+                             Color="red" />
+
+                    <Label Grid.Row="1"
+                           Grid.Column="2"
+                           
+                           Text="Partidul Roșu"
+                           FontSize="20"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center" />
+                    <RadioButton Grid.Row="1"
+                                 Grid.Column="3"
+                                 Text="2"
+                                 x:Name="RedButton"
+                                 GroupName="PartiesToVote"
+                                 HorizontalOptions="End"
+                                 VerticalOptions="Center" />
+                </Grid>
+                <BoxView VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         HeightRequest="3"
+                         WidthRequest="400" Color="#006ed6" CornerRadius="90"/>
+                <Grid  
+                      Padding="10,0,10,10"
+                      HeightRequest="70"
+                      VerticalOptions="Start">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="1"
+                           Text="3"
+                           FontSize="30"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center" />
+                    <BoxView Grid.Row="1"  
+                             Grid.Column="1"
+                             Color="blue" />
+
+                    <Label Grid.Row="1"
+                           Grid.Column="2"
+                           
+                           Text="Partidul Albastru"
+                           FontSize="20"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center" />
+                    <RadioButton Grid.Row="1"
+                                 Grid.Column="3"
+                                 x:Name="BlueButton"
+                                 Text="3"
+                                 GroupName="PartiesToVote"
+                                 HorizontalOptions="End"
+                                 VerticalOptions="Center" />
+                </Grid>
+                <BoxView VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         HeightRequest="3"
+                         WidthRequest="400" Color="#006ed6" CornerRadius="90"/>
+                <Grid 
+                      Padding="10,0,10,10"
+                      HeightRequest="70"
+                      VerticalOptions="Start">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="1"
+                           Text="4"
+                           FontSize="30"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center" />
+                    <BoxView Grid.Row="1"  
+                             Grid.Column="1"
+                             Color="Yellow" />
+
+                    <Label Grid.Row="1"
+                           Grid.Column="2"
+                           
+                           Text="Partidul Galben"
+                           FontSize="20"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center" />
+                    <RadioButton Grid.Row="1"
+                                 Grid.Column="3"
+                                 x:Name="YellowButton"
+                                 Text="4"
+                                 GroupName="PartiesToVote"
+                                 HorizontalOptions="End"
+                                 VerticalOptions="Center" />
+                </Grid>
+                <BoxView VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         HeightRequest="3"
+                         WidthRequest="400" Color="#006ed6" CornerRadius="90"/>
+                <Grid 
+                      Padding="10,0,10,10"
+                      HeightRequest="70"
+                      VerticalOptions="Start">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="1"
+                           Text="5"
+                           FontSize="30"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center" />
+                    <BoxView Grid.Row="1"  
+                             Grid.Column="1"
+                             Color="MediumVioletRed" />
+
+                    <Label Grid.Row="1"
+                           Grid.Column="2"
+                           Text="Partidul Roz"
+                           FontSize="20"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center" />
+                    <RadioButton Grid.Row="1"
+                            Grid.Column="3"
+                            x:Name="RoseButton"
+                            Text="5"
+                            GroupName="PartiesToVote"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center" />
+                </Grid>
+                <BoxView VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         HeightRequest="3"
+                         WidthRequest="400" Color="#006ed6" CornerRadius="90"/>
+                <Button x:Name="VoteButtonOnClick"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="Center"
+                        Text="Votează"
+                        Clicked="VoteButtonOnClick_OnClicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

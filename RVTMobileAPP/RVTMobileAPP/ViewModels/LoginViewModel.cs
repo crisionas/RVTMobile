@@ -1,8 +1,14 @@
-﻿using RVTMobileAPP.Validators;
+﻿using System;
+using RVTMobileAPP.Validators;
 using RVTMobileAPP.Validators.Rules;
 using System.ComponentModel;
 using System.Windows.Input;
+using RVTMobileAPP.Interfaces;
+using RVTMobileAPP.Models.AuthUser;
+using RVTMobileAPP.Views;
+using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 
 namespace RVTMobileAPP.ViewModels
 {
@@ -21,6 +27,8 @@ namespace RVTMobileAPP.ViewModels
         public void AddValidationRules()
         {
             IDNP.Validations.Add(new IsNotNullOrEmptyRule<string> { ValidationMessage = "Introduceți IDNP-ul." });
+            IDNP.Validations.Add(new IsLenghtValidRule<string> { ValidationMessage = "IDNP-ul trebuie să consiste din 13 caractere", MaximunLenght = 13, MinimunLenght = 12 });
+
             Password.Validations.Add(new IsNotNullOrEmptyRule<string> { ValidationMessage = "Introduceți parola." });
            
         }
@@ -29,8 +37,15 @@ namespace RVTMobileAPP.ViewModels
         {
             if (AreFieldsValid())
             {
-                var test = IDNP.Value;
-                await App.Current.MainPage.DisplayAlert("Welcome", "", "Ok");
+                var model = new AuthMessage
+                {
+                    IDNP = IDNP.Value,
+                    VnPassword = Password.Value
+                };
+                var response = DependencyService.Get<IUser>().Login(model).Result;
+                await App.Current.MainPage.DisplayAlert("Logare", response.Message, "Ok");
+                if (response.Status)
+                    await Application.Current.MainPage.Navigation.PushAsync(new VotePage(response.IDVN));
             }
         });
 
@@ -39,7 +54,6 @@ namespace RVTMobileAPP.ViewModels
         {
             bool isIDNPValid = IDNP.Validate();
             bool isPasswordValid = Password.Validate();
-           
 
             return isIDNPValid && isPasswordValid;
         }

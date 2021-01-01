@@ -19,12 +19,20 @@ namespace RVTMobileAPP.Views
         {
             InitializeComponent();
             Charts("0");
+            Device.StartTimer(TimeSpan.FromSeconds(30), () => {
+                Charts("0");
+                return true;
+            });
         }
 
         public ResultsPage(string id)
         {
             InitializeComponent();
             Charts(id);
+            Device.StartTimer(TimeSpan.FromSeconds(30), () => {
+                Charts(id);
+                return true;
+            });
         }
 
         public void Charts(string id)

@@ -21,14 +21,18 @@ namespace RVTMobileAPP.Views
         public StatisticsPage()
         {
             InitializeComponent();
-
+            Charts("0");
+            Device.StartTimer(TimeSpan.FromSeconds(30), () => { 
                 Charts("0");
+                return true;
+            });
         }
 
         public void Charts(string id)
         {
             try
             {
+                
                 var modelResult = StatsServices.Statistics(id).Result;
                 PopulationLabel.Text = modelResult.Population.ToString();
                 VotantLabel.Text = modelResult.Voters.ToString();
@@ -84,6 +88,10 @@ namespace RVTMobileAPP.Views
         {
             InitializeComponent();
             Charts(id);
+            Device.StartTimer(TimeSpan.FromSeconds(30), () => {
+                Charts(id);
+                return true;
+            });
         }
 
         private async void RegionSelection_OnSelectedIndexChanged(object sender, EventArgs e)

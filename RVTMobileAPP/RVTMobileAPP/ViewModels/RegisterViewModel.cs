@@ -73,7 +73,7 @@ namespace RVTMobileAPP.ViewModels
                     Phone_Number =Number.Value,
                     Email = Email.Value,
                     RegisterDate = DateTime.Now,
-                    Region = Region.Value+1;
+                    Region = Region.Value
                     
                 }; 
 

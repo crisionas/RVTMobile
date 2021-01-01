@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RVTMobileAPP.Views.AboutPage"
              xmlns:vm="clr-namespace:RVTMobileAPP.ViewModels"
-             Title="Despre noi">
+             Title="RVT | Despre noi">
     
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -18,29 +18,23 @@
         </Grid.RowDefinitions>
         <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                    <Image Source="RVTLogo.png" VerticalOptions="Center" HeightRequest="64" />
-                </ContentView>
+                <Image Source="blockchain.png" VerticalOptions="CenterAndExpand" HeightRequest="235"/>
             </StackLayout>
         </StackLayout>
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-                <Label Text="Start developing now" FontSize="Title"/>
-                <Label Text="TEST" FontSize="16" Padding="0,0,0,0"/>
+                <Label Text="Creatori" FontSize="16" HorizontalOptions="CenterAndExpand" Padding="0,0,0,0"/>
                 <Label FontSize="16" Padding="0,24,0,0">
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="Learn more at "/>
-                                <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                            </FormattedString.Spans>
+                                <Span Text="Suntem studenții"/>
+                                <Span Text=" Cristian Ionaș și Alexandru Tiora" FontAttributes="Bold"/>
+                                <Span Text=" care dezvoltăm acest sistem pentru a crea un sistem de vot cât mai transparent, ce nu poate fi manipulat și distrus. "/>
+</FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Button Margin="0,10,0,0" Text="Learn more"
-                        Command="{Binding OpenWebCommand}"
-                        BackgroundColor="{StaticResource Primary}"
-                        TextColor="White" />
             </StackLayout>
         </ScrollView>
     </Grid>

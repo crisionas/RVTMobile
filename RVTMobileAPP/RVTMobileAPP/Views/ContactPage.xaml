@@ -5,7 +5,7 @@
              Title="RVT | Contact">
     <ContentPage.Content>
         <StackLayout Padding="20" Spacing="30" HorizontalOptions="Fill">
-            <Image Source="ic_contact.png" WidthRequest="100" HeightRequest="100"/> 
+            <Image Source="message.png" WidthRequest="100" HeightRequest="100"/> 
             <Entry x:Name="Name" MaxLength="20" WidthRequest="1" Placeholder="Numele tău"/>
             <Entry x:Name="Email" Placeholder="Adresa de email"/>
             <Editor x:Name="Message" Placeholder="Mesajul tău" HeightRequest="100"/>

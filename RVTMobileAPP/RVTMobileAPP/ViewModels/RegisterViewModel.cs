@@ -72,7 +72,9 @@ namespace RVTMobileAPP.ViewModels
                     Gender = Gender.Value,
                     Phone_Number =Number.Value,
                     Email = Email.Value,
-                    RegisterDate = DateTime.Now
+                    RegisterDate = DateTime.Now,
+                    Region = Region.Value+1;
+                    
                 }; 
 
                 var service = DependencyService.Get<IUser>().Registration(model);

@@ -18,7 +18,8 @@
                 <!--Region-->
                 <Picker Title="Selectează raionul"
                     HorizontalTextAlignment="Center"
-                        x:Name="RegionSelection" >
+                        x:Name="RegionSelection" 
+                    SelectedIndexChanged="RegionSelection_OnSelectedIndexChanged" >
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Municipiul Chișinău</x:String>
@@ -122,10 +123,10 @@
                 </Grid>
                 <Label Text="Sexul" TextColor="#006ed6" HorizontalTextAlignment="Center" FontSize="20"
                    FontAttributes="Bold"/>
-                <forms:ChartView x:Name="Chart1" HeightRequest="200"/>
+                <forms:ChartView x:Name="Chart1"  HeightRequest="200" />
                 <Label Text="Total alegători"  TextColor="#006ed6" HorizontalTextAlignment="Center" FontSize="20"
                    FontAttributes="Bold"/>
-                <forms:ChartView x:Name="Chart2" HeightRequest="200"/>
+                <forms:ChartView x:Name="Chart2"  HeightRequest="300" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

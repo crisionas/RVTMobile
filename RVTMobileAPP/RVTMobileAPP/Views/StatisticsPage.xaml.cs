@@ -29,8 +29,7 @@ namespace RVTMobileAPP.Views
         {
             try
             {
-                var stats = new StatsServices();
-                var modelResult = stats.Statistics(id).Result;
+                var modelResult = StatsServices.Statistics(id).Result;
                 PopulationLabel.Text = modelResult.Population.ToString();
                 VotantLabel.Text = modelResult.Voters.ToString();
                 ParticipationLabel.Text= ((modelResult.Voters * 100) / modelResult.Population).ToString()+"%";
@@ -45,7 +44,8 @@ namespace RVTMobileAPP.Views
                     {
                         Color = SKColor.Parse(colors[n++]),
                         Label = item.Ages,
-                        ValueLabel = item.Voters
+                        ValueLabel = item.Voters,
+                        ValueLabelColor = SKColor.Parse(colors[n])
                     };
                     entries1.Add(stats1);
                 }
@@ -56,22 +56,24 @@ namespace RVTMobileAPP.Views
                 List<ChartEntry> entries2 = new List<ChartEntry>();
                 var female = new ChartEntry(modelResult.GenderStatistics.Female)
                     {
-                        Color = SKColor.Parse(colors[1]),
+                        Color = SKColor.Parse("#1cc88a"),
                         Label = "Feminin",
-                        ValueLabel = modelResult.GenderStatistics.Female.ToString()
-                    };
+                        ValueLabel = modelResult.GenderStatistics.Female.ToString(),
+                        ValueLabelColor = SKColor.Parse("#1cc88a")
+                };
                     entries2.Add(female);
 
                     var male = new ChartEntry(modelResult.GenderStatistics.Male)
                     {
-                        Color = SKColor.Parse(colors[2]),
+                        Color = SKColor.Parse("#4e73df"),
                         Label = "Masculin",
-                        ValueLabel = modelResult.GenderStatistics.Male.ToString()
+                        ValueLabel = modelResult.GenderStatistics.Male.ToString(),
+                        ValueLabelColor = SKColor.Parse("#4e73df")
                     };
-                    entries2.Add(female);
+                    entries2.Add(male);
 
-                Chart2.Chart = new PieChart { Entries = entries1 };
-                Chart1.Chart = new DonutChart { Entries = entries2 };
+                Chart2.Chart = new PieChart { Entries = entries1, LabelTextSize = 30 };
+                Chart1.Chart = new DonutChart { Entries = entries2, LabelTextSize = 30 };
             }
             catch
             {

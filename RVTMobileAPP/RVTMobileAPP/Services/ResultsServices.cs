@@ -6,14 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using RVTMobileAPP.Interfaces;
-using RVTMobileAPP.Models.Registration;
 using RVTMobileAPP.Models.Results;
 
 namespace RVTMobileAPP.Services
 {
-    public static class StatsServices
-    { 
-        public static async Task<StatisticsResponse> Statistics(string id)
+    public static class ResultsServices
+    {
+        public static async Task<ResultsResponse> Results(string id)
         {
             var data_req = JsonConvert.SerializeObject(id);
             var content = new StringContent(data_req, Encoding.UTF8, "application/json");
@@ -24,13 +23,13 @@ namespace RVTMobileAPP.Services
                 client.BaseAddress = new Uri("https://rvt-administratorapi.conveyor.cloud/");
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                var response = client.PostAsync("api/Results/Statistics", content);
-                var regresp = new StatisticsResponse();
+                var response = client.PostAsync("api/Results/Results", content);
+                var regresp = new ResultsResponse();
 
                 try
                 {
                     var data_resp = await response.Result.Content.ReadAsStringAsync();
-                    regresp = JsonConvert.DeserializeObject<StatisticsResponse>(data_resp);
+                    regresp = JsonConvert.DeserializeObject<ResultsResponse>(data_resp);
 
                 }
                 catch
@@ -43,4 +42,3 @@ namespace RVTMobileAPP.Services
         }
     }
 }
-

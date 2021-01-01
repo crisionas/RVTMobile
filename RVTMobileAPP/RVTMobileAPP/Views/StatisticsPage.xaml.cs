@@ -17,8 +17,6 @@ namespace RVTMobileAPP.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class StatisticsPage : ContentPage
     {
-        //private static StatisticsResponse modelResult;
-       
 
         public StatisticsPage()
         {

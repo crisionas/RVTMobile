@@ -17,7 +17,7 @@ using Xamarin.Forms;
 
 namespace RVTMobileAPP.ViewModels
 {
-    public class RegisterViewModel
+    public class RegisterViewModel: INotifyPropertyChanged
     {
         public ValidatableObject<string> Name { get; set; } = new ValidatableObject<string>();
         public ValidatableObject<string> Surname { get; set; } = new ValidatableObject<string>();

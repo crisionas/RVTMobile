@@ -7,18 +7,19 @@
     <ContentPage.Content>
         <ScrollView>
         <StackLayout Padding="40">
-            <Label Text="Republica Moldova"
-                   FontAttributes="Bold"
+            <Label x:Name="RegionName"
+                   FontAttributes="Bold" 
                    Style="{StaticResource TitleStyle}"/>
             <BoxView VerticalOptions="Center"
                      HorizontalOptions="Center"
                      HeightRequest="3"
                      WidthRequest="300" Color="#006ed6" CornerRadius="90"/>
 
-            <!--Region-->
+                <!--Region-->
             <Picker Title="Selectează raionul"
                     HorizontalTextAlignment="Center"
-                        SelectedItem="{Binding Region.Value}">
+                        x:Name="RegionSelection" 
+                    SelectedIndexChanged="RegionSelection_OnSelectedIndexChanged">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>Municipiul Chișinău</x:String>
@@ -75,6 +76,7 @@
 
                 <Label Grid.Row="1"
                        Text="Populația"
+                       TextColor="#006ed6"
                        FontSize="18"
                        Font="Bold"
                        HorizontalOptions="Start"
@@ -83,6 +85,7 @@
                        Grid.Column="1"
                            
                        Text="Votanți"
+                       TextColor="#006ed6"
                        FontSize="18"
                        Font="Bold"
                        HorizontalOptions="Center"
@@ -91,29 +94,28 @@
                        Grid.Column="2"
                            
                        Text="Participarea"
+                       TextColor="#006ed6"
                        FontSize="18"
                        Font="Bold"
                        HorizontalOptions="Center"
                        VerticalOptions="Center" />
 
                 <Label Grid.Row="2"
-                       Text="test"
+                       x:Name="PopulationLabel"
                        FontSize="16"
                        HorizontalOptions="Start"
                        VerticalOptions="Center" />
 
 
                 <Label Grid.Row="2"
-                       Grid.Column="1"
-                           
-                       Text="test"
+                       Grid.Column="1"   
+                       x:Name="VotantLabel"
                        FontSize="16"
                        HorizontalOptions="Center"
                        VerticalOptions="Center" />
                 <Label Grid.Row="2"
                        Grid.Column="2"
-                           
-                       Text="test"
+                       x:Name="ParticipationLabel"
                        FontSize="16"
                        HorizontalOptions="Center"
                        VerticalOptions="Center" />

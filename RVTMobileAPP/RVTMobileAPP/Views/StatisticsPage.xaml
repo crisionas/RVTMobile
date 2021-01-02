@@ -20,49 +20,47 @@
                     HorizontalTextAlignment="Center"
                         x:Name="RegionSelection" 
                     SelectedIndexChanged="RegionSelection_OnSelectedIndexChanged">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Municipiul Chișinău</x:String>
-                        <x:String>Municipiul Bălți</x:String>
-                        <x:String>Municipiul Bender (Tighina)</x:String>
-                        <x:String>Anenii Noi</x:String>
-                        <x:String>Basarabeasca</x:String>
-                        <x:String>Briceni</x:String>
-                        <x:String>Cahul</x:String>
-                        <x:String>Camenca</x:String>
-                        <x:String>Călărași</x:String>
-                        <x:String>Cantemir</x:String>
-                        <x:String>Căușeni</x:String>
-                        <x:String>Cimișlia</x:String>
-                        <x:String>Criuleni</x:String>
-                        <x:String>Dondușeni</x:String>
-                        <x:String>Drochia</x:String>
-                        <x:String>Dubăsari</x:String>
-                        <x:String>Edineț</x:String>
-                        <x:String>Fălești</x:String>
-                        <x:String>Florești</x:String>
-                        <x:String>Glodeni</x:String>
-                        <x:String>Hîncești</x:String>
-                        <x:String>Ialoveni</x:String>
-                        <x:String>Leova</x:String>
-                        <x:String>Nisporeni</x:String>
-                        <x:String>Ocnița</x:String>
-                        <x:String>Orhei</x:String>
-                        <x:String>Rezina</x:String>
-                        <x:String>Rîșcani</x:String>
-                        <x:String>Sîngerei</x:String>
-                        <x:String>Soroca</x:String>
-                        <x:String>Strășeni</x:String>
-                        <x:String>Șoldănești</x:String>
-                        <x:String>Ștefan Vodă</x:String>
-                        <x:String>Taraclia</x:String>
-                        <x:String>Telenești</x:String>
-                        <x:String>Ungheni</x:String>
-                        <x:String>Unitatea Teritorială Autonomă Găgăuzia</x:String>
-                        <x:String>Unitățile Administrativ-Teritoriale din Stînga Nistrului.</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Anenii Noi</x:String>
+                            <x:String>Balti</x:String>
+                            <x:String>Tighina</x:String>
+                            <x:String>Briceni</x:String>
+                            <x:String>Basarabeasca</x:String>
+                            <x:String>Cahul</x:String>
+                            <x:String>Calarasi</x:String>
+                            <x:String>Cimislia</x:String>
+                            <x:String>Criuleni</x:String>
+                            <x:String>Causeni</x:String>
+                            <x:String>Cantemir</x:String>
+                            <x:String>Chisinau</x:String>
+                            <x:String>Donduseni</x:String>
+                            <x:String>Drochia</x:String>
+                            <x:String>Dubasari</x:String>
+                            <x:String>Edinet</x:String>
+                            <x:String>Falesti</x:String>
+                            <x:String>Floresti</x:String>
+                            <x:String>Unitatea Teritoriala Autonoma Gagauzia</x:String>
+                            <x:String>Glodeni</x:String>
+                            <x:String>Hincesti</x:String>
+                            <x:String>Ialoveni</x:String>
+                            <x:String>Leova</x:String>
+                            <x:String>Nisporeni</x:String>
+                            <x:String>Ocnita</x:String>
+                            <x:String>Orhei</x:String>
+                            <x:String>Rezina</x:String>
+                            <x:String>Riscani</x:String>
+                            <x:String>Soldanesti</x:String>
+                            <x:String>Singerei</x:String>
+                            <x:String>Unitatea Teritoriala din Stinga Nistrului</x:String>
+                            <x:String>Soroca</x:String>
+                            <x:String>Straseni</x:String>
+                            <x:String>Stefan Voda</x:String>
+                            <x:String>Taraclia</x:String>
+                            <x:String>Ungheni</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
 
 
             <Grid 

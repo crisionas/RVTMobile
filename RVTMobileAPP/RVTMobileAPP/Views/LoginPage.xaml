@@ -21,9 +21,9 @@
             <Image Source="ic_login.png" WidthRequest="100" HeightRequest="100"/>
                 <!--IDNP-->
             <Entry Text="{Binding IDNP.Value}" 
-                       Placeholder="IDNP" HorizontalOptions="FillAndExpand">
+                       Placeholder="IDNP" PlaceholderColor="Black" TextColor="Black" BackgroundColor="AliceBlue"  HorizontalOptions="FillAndExpand">
                 <Entry.Behaviors>
-                    <behaviours:EntryLineValidationBehaviour IsValid="{Binding IDNP.IsValid}"/>
+                    <behaviours:EntryLineValidationBehaviour  IsValid="{Binding IDNP.IsValid}"/>
                 </Entry.Behaviors>
             </Entry>
 
@@ -35,7 +35,7 @@
             <!--Password-->
 
             <Entry Text="{Binding Password.Value}"
-                         Placeholder="Parola" IsPassword="True" HorizontalOptions="FillAndExpand">
+                         Placeholder="Parola" IsPassword="True" PlaceholderColor="Black" TextColor="Black" BackgroundColor="AliceBlue" IsVisible="True" HorizontalOptions="FillAndExpand">
                 <Entry.Behaviors>
                     <behaviours:EntryLineValidationBehaviour IsValid="{Binding Password.IsValid}"/>
                 </Entry.Behaviors>

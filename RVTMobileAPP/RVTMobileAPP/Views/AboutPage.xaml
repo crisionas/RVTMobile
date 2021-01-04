@@ -28,9 +28,9 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="Suntem studenții"/>
-                                <Span Text=" Cristian Ionaș și Alexandru Tiora" FontAttributes="Bold"/>
-                                <Span Text=" care dezvoltăm acest sistem pentru a crea un sistem de vot cât mai transparent, ce nu poate fi manipulat și distrus. "/>
+                                <Span TextColor="Black" Text="Suntem studenții"/>
+                                <Span TextColor="Black" Text=" Cristian Ionaș și Alexandru Tiora" FontAttributes="Bold"/>
+                                <Span TextColor="Black" Text=" care dezvoltăm acest proiect pentru a crea un sistem de vot cât mai transparent, ce nu poate fi manipulat și distrus. "/>
 </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>

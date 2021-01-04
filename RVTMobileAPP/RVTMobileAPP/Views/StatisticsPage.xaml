@@ -18,7 +18,7 @@
                 <!--Region-->
             <Picker Title="Selectează raionul"
                     HorizontalTextAlignment="Center"
-                        x:Name="RegionSelection" 
+                        x:Name="RegionSelection" TitleColor="Black" BackgroundColor="AliceBlue"
                     SelectedIndexChanged="RegionSelection_OnSelectedIndexChanged">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">

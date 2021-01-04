@@ -21,7 +21,7 @@
                
                 <!--Name-->
                 <Entry Text="{Binding Name.Value}" 
-                       Placeholder="Nume">
+                       Placeholder="Nume" PlaceholderColor="Black" TextColor="Black" BackgroundColor="AliceBlue">
                     <Entry.Behaviors>
                         <behaviours:EntryLineValidationBehaviour IsValid="{Binding Name.IsValid}"/>
                     </Entry.Behaviors>
@@ -32,7 +32,7 @@
                        Style="{StaticResource ErrorTextStyle}"/>
                 <!--Surname-->
                 <Entry Text="{Binding Surname.Value}" 
-                       Placeholder="Prenume">
+                       Placeholder="Prenume" PlaceholderColor="Black" TextColor="Black" BackgroundColor="AliceBlue">
                     <Entry.Behaviors>
                         <behaviours:EntryLineValidationBehaviour IsValid="{Binding Surname.IsValid}"/>
                     </Entry.Behaviors>
@@ -44,7 +44,7 @@
 
                 <!--Gender-->
                 <Picker Title="Sexul"
-                        SelectedItem="{Binding Gender.Value}">
+                        SelectedItem="{Binding Gender.Value}" TitleColor="Black" BackgroundColor="AliceBlue" TextColor="Black">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Masculin</x:String>
@@ -58,8 +58,8 @@
 
 
                 <!--Birthday-->
-                <Label Text="Data nașterii" Margin="5"/>
-                <DatePicker Date="{Binding Birth_date.Value}"/>
+                <Label Text="Data nașterii" TextColor="Black" FontAttributes="Bold" Margin="5"/>
+                <DatePicker TextColor="Black" BackgroundColor="AliceBlue" Date="{Binding Birth_date.Value}"/>
                 <Label Text="{Binding Birth_date.Errors, Converter={StaticResource FirstValidationErrorConverter}}"
                        IsVisible="{Binding Birth_date.IsValid, Converter={StaticResource InverseBoolConverter}}"
                        Style="{StaticResource ErrorTextStyle}"/>
@@ -68,7 +68,7 @@
                 <!--IDNP-->
                 <Entry Text="{Binding IDNP.Value}"
                        MaxLength="13"
-                       Placeholder="IDNP">
+                       Placeholder="IDNP" PlaceholderColor="Black" TextColor="Black" BackgroundColor="AliceBlue">
                     <Entry.Behaviors>
                         <behaviours:EntryLineValidationBehaviour IsValid="{Binding IDNP.IsValid}"/>
                     </Entry.Behaviors>
@@ -82,7 +82,7 @@
                 <!--Phone Number-->
                 <Entry Text="{Binding Number.Value}"
                        MaxLength="10"
-                       Placeholder="Numărul de telefon">
+                       Placeholder="Numărul de telefon" PlaceholderColor="Black" TextColor="Black" BackgroundColor="AliceBlue">
                     <Entry.Behaviors>
                         <behaviours:EntryLineValidationBehaviour IsValid="{Binding Number.IsValid}"/>
                     </Entry.Behaviors>
@@ -95,7 +95,7 @@
 
                 <!--Email-->
                 <Entry Text="{Binding Email.Value}"
-                       Placeholder="Email">
+                       Placeholder="Email" PlaceholderColor="Black" TextColor="Black" BackgroundColor="AliceBlue">
                     <Entry.Behaviors>
                         <behaviours:EntryLineValidationBehaviour IsValid="{Binding Email.IsValid}"/>
                     </Entry.Behaviors>
@@ -108,7 +108,7 @@
 
                 <!--Region-->
                 <Picker Title="Domiciliu"
-                        SelectedItem="{Binding Region.Value}">
+                        SelectedItem="{Binding Region.Value}" TitleColor="Black" BackgroundColor="AliceBlue" TextColor="Black">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Anenii Noi</x:String>
@@ -158,7 +158,7 @@
                 <!--Terms And Condition-->
                 <StackLayout Orientation="Horizontal">
                     <CheckBox IsChecked="{Binding TermsAndCondition.Value}"/>
-                    <Label Text="Sunt de acord cu termenii și condițiile"
+                    <Label Text="Sunt de acord cu termenii și condițiile" TextColor="Black"
                            VerticalOptions="Center"/>
                 </StackLayout>
 

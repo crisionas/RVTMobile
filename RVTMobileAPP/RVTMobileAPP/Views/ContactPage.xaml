@@ -5,10 +5,11 @@
              Title="RVT | Contact">
     <ContentPage.Content>
         <StackLayout Padding="20" Spacing="30" HorizontalOptions="Fill">
-            <Image Source="message.png" WidthRequest="100" HeightRequest="100"/> 
-            <Entry x:Name="Name" MaxLength="20" WidthRequest="1" Placeholder="Numele tău"/>
-            <Entry x:Name="Email" Placeholder="Adresa de email"/>
-            <Editor x:Name="Message" Placeholder="Mesajul tău" HeightRequest="100"/>
+            <Label Text="Contact" Style="{StaticResource TitleStyle}" FontAttributes="Bold"/>
+            <Image Source="message.png" WidthRequest="100" HeightRequest="100"/>
+            <Entry x:Name="Name" TextColor="Black" PlaceholderColor="Black" BackgroundColor="AliceBlue" MaxLength="20" WidthRequest="1" Placeholder="Numele tău"/>
+            <Entry x:Name="Email" TextColor="Black" PlaceholderColor="Black" BackgroundColor="AliceBlue" Placeholder="Adresa de email"/>
+            <Editor x:Name="Message" Placeholder="Mesajul tău" PlaceholderColor="Black" TextColor="Black" BackgroundColor="AliceBlue" HeightRequest="100"/>
             <Button Clicked="Send_clicked" Text="Trimite" />
         </StackLayout>
     </ContentPage.Content>

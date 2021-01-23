@@ -35,11 +35,11 @@ namespace RVTMobileAPP.Views
             });
         }
 
-        public void Charts(string id)
+        public async void Charts(string id)
         {
             try
             {
-                var modelResult = ResultsServices.Results(id).Result;
+                var modelResult = await ResultsServices.Results(id);
                 PopulationLabel.Text = modelResult.Population.ToString();
                 VotantLabel.Text = modelResult.Votants.ToString();
                 ParticipationLabel.Text = ((modelResult.Votants * 100) / modelResult.Population).ToString() + "%";

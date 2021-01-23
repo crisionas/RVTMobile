@@ -15,31 +15,35 @@ namespace RVTMobileAPP.Services
     { 
         public static async Task<StatisticsResponse> Statistics(string id)
         {
-            var data_req = JsonConvert.SerializeObject(id);
-            var content = new StringContent(data_req, Encoding.UTF8, "application/json");
-
-            using (var client = new HttpClient())
+            return await Task.Run(() =>
             {
-                //CHANGE ADDRESS FOR CLOUD
-                client.BaseAddress = new Uri("https://rvt-administratorapi.conveyor.cloud/");
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                var response = client.PostAsync("api/Results/Statistics", content);
-                var regresp = new StatisticsResponse();
+                var data_req = JsonConvert.SerializeObject(id);
+                var content = new StringContent(data_req, Encoding.UTF8, "application/json");
 
-                try
+                using (var client = new HttpClient())
                 {
-                    var data_resp = await response.Result.Content.ReadAsStringAsync();
-                    regresp = JsonConvert.DeserializeObject<StatisticsResponse>(data_resp);
+                    //CHANGE ADDRESS FOR CLOUD
+                    client.BaseAddress = new Uri("https://rvt-administratorapi.conveyor.cloud/");
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
+                    var response = client.PostAsync("api/Results/Statistics", content);
+                    var regresp = new StatisticsResponse();
+
+                    try
+                    {
+                        var data_resp = response.Result.Content.ReadAsStringAsync();
+                        regresp = JsonConvert.DeserializeObject<StatisticsResponse>(data_resp.Result);
+
+                    }
+                    catch
+                    {
+
+                    }
+
+                    return regresp;
                 }
-                catch
-                {
-
-                }
-
-                return regresp;
-            }
+            });
         }
     }
 }

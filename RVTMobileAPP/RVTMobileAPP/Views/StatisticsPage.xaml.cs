@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Microcharts;
@@ -28,12 +29,11 @@ namespace RVTMobileAPP.Views
             });
         }
 
-        public void Charts(string id)
+        public async void Charts(string id)
         {
             try
             {
-                
-                var modelResult = StatsServices.Statistics(id).Result;
+                var modelResult = await StatsServices.Statistics(id);
                 PopulationLabel.Text = modelResult.Population.ToString();
                 VotantLabel.Text = modelResult.Voters.ToString();
                 ParticipationLabel.Text= ((modelResult.Voters * 100) / modelResult.Population).ToString()+"%";
@@ -83,6 +83,8 @@ namespace RVTMobileAPP.Views
             {
             }
         }
+
+
 
         public StatisticsPage(string id)
         {
